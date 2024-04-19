@@ -1,16 +1,20 @@
 pipeline {
-    agent any 
+    agent any
 
     stages {
-        stage('compile') {
+        stage('Build') {
             steps {
                 sh 'node index.js'
             }
         }
-
-        stage('run') {
+        stage('Test') {
             steps {
-                sh 'node index'
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
