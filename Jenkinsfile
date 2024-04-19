@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     stages {
-        stage('ocmpile') {
+        stage('compile') {
             steps {
                 sh 'node index.js'
             }
